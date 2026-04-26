@@ -116,15 +116,15 @@ const features = [
         </div>
       </div>
     </section>
-<section className="py-16 bg-white dark:bg-slate-900">
+<section className="py-16 bg-white">
       <div className="max-w-[1280px] mx-auto px-6 lg:px-12">
         
         {/* Title */}
         <div className="text-center mb-12">
-          <h2 className="text-2xl md:text-3xl font-bold text-primary dark:text-white">
+          <h2 className="text-2xl md:text-3xl font-bold text-primary">
             Why Choose Nyoman Point Break Surf School
           </h2>
-          <p className="text-primary dark:text-slate-400 mt-3 max-w-xl mx-auto">
+          <p className="text-primary  mt-3 max-w-xl mx-auto">
             Experience the best surf lessons in Bali with professional local instructors and top-quality service.
           </p>
         </div>
@@ -134,17 +134,17 @@ const features = [
           {features.map((item, index) => (
             <div
               key={index}
-              className={`flex flex-col items-center text-center p-4 rounded-xl transition-all hover:bg-sky-50 dark:hover:bg-slate-800 hover:scale-105 ${
+              className={`flex flex-col items-center text-center p-4 rounded-xl transition-all hover:bg-sky-50  hover:scale-105 ${
                 index === 4 ? "col-span-2 md:col-span-1" : ""
               }`}
             >
               {/* Icon */}
-              <div className="w-12 h-12 text-primary/80 bg-sky-100 dark:bg-sky-900/30 flex items-center justify-center rounded-full mb-4 text-xl">
+              <div className="w-12 h-12 text-primary/80 bg-sky-100 flex items-center justify-center rounded-full mb-4 text-xl">
                 {item.icon}
               </div>
 
               {/* Text */}
-              <span className="text-sm font-semibold tracking-wide text-slate-700 dark:text-slate-300 uppercase">
+              <span className="text-sm font-semibold tracking-wide text-slate-700 uppercase">
                 {item.title}
               </span>
             </div>
@@ -154,22 +154,22 @@ const features = [
       </div>
     </section>
 
-    <section className="py-20 bg-sky-50 dark:bg-slate-900">
+    <section className="py-20 bg-sky-50 ">
       <div className="max-w-[1280px] mx-auto px-6 lg:px-12">
 
         {/* Title */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-primary dark:text-white mb-3">
+          <h2 className="text-3xl font-bold text-primary mb-3">
             Choose Your Surf Adventure
           </h2>
-          <p className="text-slate-600 dark:text-slate-400">
+          <p className="text-slate-600 ">
             Professional coaching for every level. All packages include high-quality equipment.
           </p>
         </div>
 
         {/* SINGLE SESSION */}
         <div className="mb-16">
-          <h3 className="text-xl font-semibold mb-6 flex items-center text-slate-800 dark:text-white">
+          <h3 className="text-xl font-semibold mb-6 flex items-center text-slate-800 ">
             <span className="w-8 h-1 bg-[#004370]/80 mr-3"></span>
             Single Session (2 Hours)
           </h3>
@@ -178,7 +178,7 @@ const features = [
             {singleSession.map((pkg, i) => (
               <div
                 key={i}
-                className="bg-white dark:bg-slate-800 rounded-xl shadow hover:-translate-y-2 transition-all p-6"
+                className="bg-white d rounded-xl shadow hover:-translate-y-2 transition-all p-6"
               >
                 <div className="text-center mb-6 font-bold text-orange-500  uppercase">
                   {pkg.name}
@@ -188,12 +188,12 @@ const features = [
                   <span className="line-through text-slate-400">
                     {pkg.oldPrice}
                   </span>
-                  <span className="text-3xl font-bold text-slate-900 dark:text-white">
+                  <span className="text-3xl font-bold text-slate-900 d">
                     {pkg.price}
                   </span>
                 </div>
 
-                <ul className="space-y-2 mb-6 text-sm text-slate-600 dark:text-slate-300">
+                <ul className="space-y-2 mb-6 text-sm text-slate-600 ">
                   {pkg.features.map((f, idx) => (
                     <li key={idx}>✔ {f}</li>
                   ))}
@@ -216,7 +216,7 @@ const features = [
 
         {/* 3 DAY PACKAGE */}
         <div>
-          <h3 className="text-xl font-semibold mb-6 flex items-center text-slate-800 dark:text-white">
+          <h3 className="text-xl font-semibold mb-6 flex items-center text-slate-800 ">
             <span className="w-8 h-1 bg-[#004370]/80 mr-3"></span>
             3-Day Intensive Package
           </h3>
@@ -225,7 +225,7 @@ const features = [
             {packages3Day.map((pkg, i) => (
               <div
                 key={i}
-                className="bg-white dark:bg-slate-800 rounded-xl shadow hover:-translate-y-2 transition-all p-6"
+                className="bg-white  rounded-xl shadow hover:-translate-y-2 transition-all p-6"
               >
                 <div className="mb-2 font-bold text-[#004370]/80 uppercase">
                   {pkg.name}
@@ -235,12 +235,12 @@ const features = [
                   <span className="line-through text-slate-400">
                     {pkg.oldPrice}
                   </span>
-                  <span className="text-3xl font-bold text-slate-900 dark:text-white">
+                  <span className="text-3xl font-bold text-slate-900 ">
                     {pkg.price}
                   </span>
                 </div>
 
-                <p className="text-sm text-slate-600 dark:text-slate-300 mb-6">
+                <p className="text-sm text-slate-600 mb-6">
                   {pkg.desc}
                 </p>
 
@@ -262,7 +262,7 @@ const features = [
       </div>
     </section>
 
-    <section className="py-20 bg-white dark:bg-slate-900">
+    <section className="py-20 bg-white ">
       <div className="max-w-[1280px] mx-auto px-6 lg:px-12">
 
         <div className="bg-primary text-white rounded-3xl overflow-hidden flex flex-col md:flex-row">
@@ -307,7 +307,7 @@ const features = [
       </div>
     </section>
 
-    <section className="py-20 bg-slate-50 dark:bg-slate-900">
+    <section className="py-20 bg-slate-50 ">
       <div className="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 
         {/* LEFT CONTENT */}
@@ -322,9 +322,9 @@ const features = [
           </h2>
 
           {/* Testimonial Card */}
-          <div className="bg-white dark:bg-slate-800 p-6 md:p-8 rounded-3xl shadow-sm border-l-4 border-secondary italic">
+          <div className="bg-white  p-6 md:p-8 rounded-3xl shadow-sm border-l-4 border-secondary italic">
             
-            <p className="text-slate-600 dark:text-slate-300 text-lg mb-4">
+            <p className="text-slate-600  text-lg mb-4">
               "Nyoman didn't just teach me how to stand up; he taught me how to read the ocean. 
               In three days, I went from a complete beginner to catching my first green waves. 
               Unforgettable experience!"

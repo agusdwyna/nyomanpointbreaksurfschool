@@ -63,11 +63,11 @@ export default function About() {
             Our Stories
           </h2>
 
-          <p className="text-slate-600 dark:text-slate-300 leading-relaxed">
+          <p className="text-slate-600 leading-relaxed">
             It all started with surfing with friends, and we had the idea to open a surfing business. We started in 2006, planning to launch a surfing service in Nusa Dua, dedicated to helping everyone, both beginners and experienced, experience the thrill of Bali's waves safely and enjoyably. With experienced instructors, quality equipment, and prime locations, we are committed to providing an unforgettable surfing experience.
           </p>
 
-          <p className="text-slate-600 dark:text-slate-300 leading-relaxed">
+          <p className="text-slate-600  leading-relaxed">
            Located in the beautiful Nusa Dua area, our surfing business was founded with the goal of introducing surfing to everyone, from beginners to advanced. We offer a variety of services, from private and group surfing lessons, board rentals, to guiding you to the best spots based on wave conditions.
 
 Supported by experienced local instructors who understand the characteristics of Nusa Dua's waves, we prioritize the safety, comfort, and skill development of each participant. We believe that surfing is not just a sport, but a lifestyle that teaches balance, patience, and a connection with nature.
@@ -110,7 +110,7 @@ Fun, safe, and definitely addictive!
             />
 
             {/* Floating Card */}
-            <div className="absolute -bottom-6 -left-6 bg-white dark:bg-slate-800 p-4 rounded-xl shadow-lg max-w-[220px]">
+            <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-lg max-w-[220px]">
 
               <p className="text-xs uppercase text-secondary mb-1 font-semibold">
                 Founder’s Mission
@@ -136,7 +136,7 @@ Fun, safe, and definitely addictive!
           <h2 className="text-3xl md:text-4xl font-bold text-primary">
             Our Vision
           </h2>
-          <p className="text-slate-600 dark:text-slate-400 mt-2">
+          <p className="text-slate-600  mt-2">
             More than just standing on a board.
           </p>
         </div>
@@ -146,7 +146,7 @@ Fun, safe, and definitely addictive!
           {values.map((item, index) => (
             <div
               key={index}
-              className="bg-white dark:bg-slate-800 p-8 rounded-xl shadow-lg border border-slate-100 dark:border-slate-700 flex flex-col gap-4 hover:-translate-y-2 transition-all duration-300"
+              className="bg-white  p-8 rounded-xl shadow-lg border border-slate-100 flex flex-col gap-4 hover:-translate-y-2 transition-all duration-300"
             >
               {/* Icon */}
               <div>{item.icon}</div>
@@ -157,7 +157,7 @@ Fun, safe, and definitely addictive!
               </h3>
 
               {/* Desc */}
-              <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+              <p className="text-slate-600  text-sm leading-relaxed">
                 {item.desc}
               </p>
             </div>

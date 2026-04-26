@@ -15,10 +15,10 @@ export default function Header() {
   ];
 
   const activeClass =
-    "text-sky-700 dark:text-sky-400 font-bold border-b-2 border-sky-700 pb-1";
+    "text-sky-700  font-bold border-b-2 border-sky-700 pb-1";
 
   const inactiveClass =
-    "text-slate-600 dark:text-slate-400 hover:text-sky-700 dark:hover:text-sky-300 transition-all";
+    "text-slate-600  hover:text-sky-700  transition-all";
 
   const phoneNumber = "6281215679959";
   const message = "Halo Nyoman Point Break, saya ingin booking lesson.";
@@ -27,12 +27,12 @@ export default function Header() {
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
   return (
-    <header className="fixed top-0 w-full z-50 border-b bg-white/95 dark:bg-slate-950/95 backdrop-blur-md border-slate-100 dark:border-slate-800 shadow-[0_4px_20px_-4px_rgba(0,91,150,0.08)]">
+    <header className="fixed top-0 w-full z-50 border-b bg-white/95  backdrop-blur-md border-slate-100  shadow-[0_4px_20px_-4px_rgba(0,91,150,0.08)]">
       
       <div className="flex justify-between items-center h-20 px-6 lg:px-12 max-w-[1280px] mx-auto">
         
         {/* Logo */}
-        <div className="text-lg font-extrabold tracking-tighter text-sky-900 dark:text-sky-100 uppercase">
+        <div className="text-lg font-extrabold tracking-tighter text-sky-900 d uppercase">
             <img src="/logo.png" alt="Nyoman Point Break Surf School Logo" className="h-25 lg:h-30 w-auto" />
         </div>
 
@@ -78,13 +78,13 @@ export default function Header() {
 
      {/* Mobile Menu */}
 {isOpen && (
-  <div className="md:hidden fixed top-20 left-0 w-full bg-white dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800 shadow-lg animate-slideDown">
+  <div className="md:hidden fixed top-20 left-0 w-full bg-white  border-t border-slate-200 shadow-lg animate-slideDown">
     
     <div className="px-6 py-6 flex flex-col gap-1">
 
       {/* Close Button */}
       <div className="flex justify-between items-center mb-2">
-        <span className="font-semibold text-slate-700 dark:text-slate-300">
+        <span className="font-semibold text-slate-700 ">
           Menu
         </span>
         <button
@@ -104,8 +104,8 @@ export default function Header() {
           className={({ isActive }) =>
             `block text-lg font-medium py-3 px-2 rounded-lg transition-all ${
               isActive
-                ? "bg-sky-100 text-sky-700 dark:bg-sky-900/40 dark:text-sky-300"
-                : "text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800"
+                ? "bg-sky-100 text-sky-700"
+                : "text-slate-700  hover:bg-slate-100 "
             }`
           }
         >

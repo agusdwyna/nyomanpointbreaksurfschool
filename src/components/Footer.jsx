@@ -7,7 +7,7 @@ export default function Footer() {
 
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
   return (
-    <footer className="bg-slate-50 dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800">
+    <footer className="bg-slate-50  border-t border-slate-200 ">
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-6 lg:px-12 py-12 max-w-7xl mx-auto">
 
@@ -17,7 +17,7 @@ export default function Footer() {
             Nyoman Point Break Surf School
           </h3>
 
-          <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">
+          <p className="text-slate-500 text-sm leading-relaxed">
             Premium surf instruction based in Bali. Empowering surfers through
             technical excellence and ocean respect.
           </p>
@@ -84,7 +84,7 @@ export default function Footer() {
       <div className="space-y-4">
   <h5 className="text-primary font-semibold">Start Your Surf Journey</h5>
 
-  <p className="text-slate-500 dark:text-slate-400 text-sm">
+  <p className="text-slate-500  text-sm">
     Ready to catch your first wave? Chat with us directly and book your lesson today.
   </p>
 
@@ -101,8 +101,8 @@ export default function Footer() {
       </div>
 
       {/* Bottom */}
-      <div className="px-6 lg:px-12 py-6 border-t border-slate-200 dark:border-slate-800 text-center">
-        <p className="text-slate-500 dark:text-slate-400 text-sm">
+      <div className="px-6 lg:px-12 py-6 border-t border-slate-200 d text-center">
+        <p className="text-slate-500  text-sm">
           © {new Date().getFullYear()} DWebDev. All rights reserved.
         </p>
       </div>
