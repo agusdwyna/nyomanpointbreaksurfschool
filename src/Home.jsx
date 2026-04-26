@@ -80,15 +80,19 @@ const features = [
     <>
     <section className="relative h-[921px] min-h-[600px] flex items-center overflow-hidden pt-28 md:pt-0">
       
-      {/* Background */}
-      <div className="absolute inset-0 z-0">
-        <img
-          src="herohome.png"
-          alt="Surfing in Bali"
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-sky-900/60 to-transparent"></div>
-      </div>
+     <div className="absolute inset-0 z-0">
+  <img
+    src="herohome.png"
+    alt="Surfing in Bali"
+    className="w-full h-full object-cover"
+  />
+
+  {/* Black overlay */}
+  <div className="absolute inset-0 bg-black/40"></div>
+
+  {/* Gradient overlay */}
+  <div className="absolute inset-0 bg-gradient-to-r from-sky-900/60 to-transparent"></div>
+</div>
 
       {/* Content */}
       <div className="relative z-10 max-w-[1280px] mx-auto px-6 lg:px-12 w-full text-white">
