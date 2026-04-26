@@ -18,7 +18,7 @@ import ScrollToTop from "./components/ScrollToTop";
 function App() {
   return (
     <BrowserRouter>
-      {/* <ScrollToTop /> */}
+      <ScrollToTop />
       <div className="bg-[#f5f7f8] text-[#101518] min-h-screen font-['Plus_Jakarta_Sans']">
         
         <Header />
