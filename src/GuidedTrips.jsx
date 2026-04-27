@@ -72,7 +72,7 @@ export default function Header() {
           {/* CARD 2 */}
           <div className="group bg-white rounded-2xl overflow-hidden border-slate-100 shadow-sm hover:shadow-xl transition">
             <img
-              src="tools.jpg"
+              src="tools.jpeg"
               className="h-40 w-full object-cover group-hover:scale-105 transition"
               alt="gear"
             />
@@ -88,7 +88,7 @@ export default function Header() {
           {/* CARD 3 */}
           <div className="group bg-white rounded-2xl overflow-hidden border-slate-100 shadow-sm hover:shadow-xl transition">
             <img
-              src="airport.jpg"
+              src="airport.jpeg"
               className="h-40 w-full object-cover group-hover:scale-105 transition"
               alt="airport"
             />
