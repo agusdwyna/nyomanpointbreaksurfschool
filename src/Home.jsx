@@ -22,11 +22,12 @@ const features = [
     { icon: <FaMapMarkerAlt />, title: "Best Surf Spots in Bali" },
   ];
 
-  const singleSession = [
+   const singleSession = [
     {
       name: "Private",
       oldPrice: "700k",
       price: "600k",
+      image: "private.jpg",
       features: [
         "1 Instructor : 1 Student",
         "Rash guard & Sunscreen",
@@ -37,6 +38,7 @@ const features = [
       name: "Semi Private",
       oldPrice: "550k",
       price: "450k",
+      image: "semi.jpg",
       features: [
         "1 Instructor : 2 Students",
         "Rash guard & Sunscreen",
@@ -47,6 +49,7 @@ const features = [
       name: "Group",
       oldPrice: "450k",
       price: "350k",
+      image: "group.jpeg",
       features: [
         "1 Instructor : 3-4 Students",
         "Rash guard & Sunscreen",
@@ -60,18 +63,21 @@ const features = [
       name: "Private (3 Days)",
       oldPrice: "1.800k",
       price: "1.600k",
+      image: "private3days.png",
       desc: "Most effective for rapid skill development with dedicated coaching.",
     },
     {
       name: "Semi Private (3 Days)",
       oldPrice: "3.300k",
       price: "2.800k",
+      image: "semi3days.jpg",
       desc: "Perfect for couples or friends traveling together.",
     },
     {
       name: "Group (3 Days)",
       oldPrice: "4.050k",
       price: "3.450k",
+      image: "group3days.jpg",
       desc: "Best value for small groups looking for a challenge.",
     },
   ];
@@ -79,47 +85,55 @@ const features = [
   return (
     <>
     <section className="relative h-[921px] min-h-[600px] flex items-center overflow-hidden pt-28 md:pt-0">
-      
-     <div className="absolute inset-0 z-0">
-  <img
-    src="herohome.png"
-    alt="Surfing in Bali"
-    className="w-full h-full object-cover"
-  />
 
-  {/* Black overlay */}
-  <div className="absolute inset-0 bg-black/40"></div>
+  {/* VIDEO BACKGROUND */}
+  <div className="absolute inset-0 z-0">
+    <video
+      className="w-full h-full object-cover"
+      autoPlay
+      muted
+      loop
+      playsInline
+    >
+      <source src="/hero.mp4" type="video/mp4" />
+    </video>
 
-  {/* Gradient overlay */}
-  <div className="absolute inset-0 bg-gradient-to-r from-sky-900/60 to-transparent"></div>
-</div>
+    {/* Black overlay */}
+    <div className="absolute inset-0 bg-black/40"></div>
 
-      {/* Content */}
-      <div className="relative z-10 max-w-[1280px] mx-auto px-6 lg:px-12 w-full text-white">
-        <div className="max-w-2xl">
-          
-          <h1 className="text-5xl md:text-5xl lg:text-6xl font-extrabold mb-4">
-            Ride Your First Wave with Confidence
-          </h1>
+    {/* Gradient overlay */}
+    <div className="absolute inset-0 bg-gradient-to-r from-sky-900/60 to-transparent"></div>
+  </div>
 
-          <p className="text-xl md:text-xl mb-6 text-white/90">
-        Learn to surf in Bali with experienced local instructors with Nyoman Point Break Surf School. 
-          </p>
+  {/* CONTENT */}
+  <div className="relative z-10 max-w-[1280px] mx-auto px-6 lg:px-12 w-full text-white">
 
-        <a
-  href={createWhatsAppLink(
-    "Hi Nyoman Point Break 🌊, saya ingin booking lesson."
-  )}
-  target="_blank"
-  rel="noopener noreferrer"
-  className="inline-flex items-center bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all active:scale-95"
->
-  Book via WhatsApp
-</a>
+    <div className="max-w-2xl">
 
-        </div>
-      </div>
-    </section>
+      <h1 className="text-5xl md:text-5xl lg:text-6xl font-extrabold mb-4">
+        Ride Your First Wave with Confidence
+      </h1>
+
+      <p className="text-xl md:text-xl mb-6 text-white/90">
+        Learn to surf in Bali with experienced local instructors at Nyoman Point Break Surf School.
+      </p>
+
+      <a
+        href={createWhatsAppLink(
+          "Hi Nyoman Point Break 🌊, saya ingin booking lesson."
+        )}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex items-center bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all active:scale-95"
+      >
+        Book via WhatsApp
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
 <section className="py-16 bg-white">
       <div className="max-w-[1280px] mx-auto px-6 lg:px-12">
         
@@ -182,37 +196,48 @@ const features = [
             {singleSession.map((pkg, i) => (
               <div
                 key={i}
-                className="bg-white d rounded-xl shadow hover:-translate-y-2 transition-all p-6"
+                className="bg-white rounded-xl shadow hover:-translate-y-2 transition-all overflow-hidden"
               >
-                <div className="text-center mb-6 font-bold text-orange-500  uppercase">
-                  {pkg.name}
+                {/* Package Image */}
+                <div className="w-full h-48 overflow-hidden">
+                  <img
+                    src={pkg.image}
+                    alt={pkg.name}
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  />
                 </div>
 
-                <div className="mb-6 flex items-baseline gap-2">
-                  <span className="line-through text-slate-400">
-                    {pkg.oldPrice}
-                  </span>
-                  <span className="text-3xl font-bold text-slate-900 d">
-                    {pkg.price}
-                  </span>
+                <div className="p-6">
+                  <div className="text-center mb-6 font-bold text-orange-500 uppercase">
+                    {pkg.name}
+                  </div>
+
+                  <div className="mb-6 flex items-baseline gap-2">
+                    <span className="line-through text-slate-400">
+                      {pkg.oldPrice}
+                    </span>
+                    <span className="text-3xl font-bold text-slate-900">
+                      {pkg.price}
+                    </span>
+                  </div>
+
+                  <ul className="space-y-2 mb-6 text-sm text-slate-600">
+                    {pkg.features.map((f, idx) => (
+                      <li key={idx}>✔ {f}</li>
+                    ))}
+                  </ul>
+
+                  
+                    <a href={createWhatsAppLink(
+                      `Hi Nyoman Point Break 🌊\n\nI want to book:\nPackage: ${pkg.name} (Single Session)\nDate: \nPeople: \n\nPlease confirm availability 🙏`
+                    )}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block text-center bg-orange-500 hover:bg-orange-600 text-white py-3 rounded-lg font-bold"
+                  >
+                    Book via WhatsApp
+                  </a>
                 </div>
-
-                <ul className="space-y-2 mb-6 text-sm text-slate-600 ">
-                  {pkg.features.map((f, idx) => (
-                    <li key={idx}>✔ {f}</li>
-                  ))}
-                </ul>
-
-                <a
-                  href={createWhatsAppLink(
-                    `Hi Nyoman Point Break 🌊\n\nI want to book:\nPackage: ${pkg.name} (Single Session)\nDate: \nPeople: \n\nPlease confirm availability 🙏`
-                  )}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block text-center bg-orange-500 hover:bg-orange-00 text-white py-3 rounded-lg font-bold"
-                >
-                  Book via WhatsApp
-                </a>
               </div>
             ))}
           </div>
@@ -220,7 +245,7 @@ const features = [
 
         {/* 3 DAY PACKAGE */}
         <div>
-          <h3 className="text-xl font-semibold mb-6 flex items-center text-slate-800 ">
+          <h3 className="text-xl font-semibold mb-6 flex items-center text-slate-800">
             <span className="w-8 h-1 bg-[#004370]/80 mr-3"></span>
             3-Day Intensive Package
           </h3>
@@ -229,35 +254,46 @@ const features = [
             {packages3Day.map((pkg, i) => (
               <div
                 key={i}
-                className="bg-white  rounded-xl shadow hover:-translate-y-2 transition-all p-6"
+                className="bg-white rounded-xl shadow hover:-translate-y-2 transition-all overflow-hidden"
               >
-                <div className="mb-2 font-bold text-[#004370]/80 uppercase">
-                  {pkg.name}
+                {/* Package Image */}
+                <div className="w-full h-48 overflow-hidden">
+                  <img
+                    src={pkg.image}
+                    alt={pkg.name}
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  />
                 </div>
 
-                <div className="mb-4 flex items-baseline gap-2">
-                  <span className="line-through text-slate-400">
-                    {pkg.oldPrice}
-                  </span>
-                  <span className="text-3xl font-bold text-slate-900 ">
-                    {pkg.price}
-                  </span>
+                <div className="p-6">
+                  <div className="mb-2 font-bold text-[#004370]/80 uppercase">
+                    {pkg.name}
+                  </div>
+
+                  <div className="mb-4 flex items-baseline gap-2">
+                    <span className="line-through text-slate-400">
+                      {pkg.oldPrice}
+                    </span>
+                    <span className="text-3xl font-bold text-slate-900">
+                      {pkg.price}
+                    </span>
+                  </div>
+
+                  <p className="text-sm text-slate-600 mb-6">
+                    {pkg.desc}
+                  </p>
+
+                  
+                    <a href={createWhatsAppLink(
+                      `Hi Nyoman Point Break 🌊\n\nI want to book:\nPackage: ${pkg.name}\nDate: \nPeople: \n\nPlease confirm availability 🙏`
+                    )}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block text-center bg-[#004370]/80 hover:bg-[#004370] text-white py-3 rounded-lg font-bold"
+                  >
+                    Book via WhatsApp
+                  </a>
                 </div>
-
-                <p className="text-sm text-slate-600 mb-6">
-                  {pkg.desc}
-                </p>
-
-                <a
-                  href={createWhatsAppLink(
-                    `Hi Nyoman Point Break 🌊\n\nI want to book:\nPackage: ${pkg.name}\nDate: \nPeople: \n\nPlease confirm availability 🙏`
-                  )}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block text-center bg-[#004370]/80 hover:bg-[#004370] text-white py-3 rounded-lg font-bold"
-                >
-                  Book via WhatsApp
-                </a>
               </div>
             ))}
           </div>
@@ -358,7 +394,7 @@ const features = [
             />
 
             <img
-              src="hero2.jpg"
+              src="hero2.jpeg"
               alt="Surfers paddling together"
               className="rounded-3xl shadow-lg w-full h-80 object-cover"
             />
@@ -367,7 +403,7 @@ const features = [
           {/* Column 2 */}
           <div className="space-y-4">
             <img
-              src="hero3.jpg"
+              src="hero3.jpeg"
               alt="Palm trees tropical beach"
               className="rounded-3xl shadow-lg w-full h-80 object-cover"
             />

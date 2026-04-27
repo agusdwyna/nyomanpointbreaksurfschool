@@ -56,7 +56,7 @@ export default function Header() {
           {/* CARD 1 */}
           <div className="group bg-white rounded-2xl overflow-hidden border-slate-100 shadow-sm hover:shadow-xl transition">
             <img
-              src="coaching.jpg"
+              src="coach.jpeg"
               className="h-40 w-full object-cover group-hover:scale-105 transition"
               alt="coaching"
             />
