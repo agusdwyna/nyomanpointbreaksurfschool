@@ -103,7 +103,7 @@ const phoneNumber = "6281215679959";
           
           <div className="relative h-64">
             <img
-              src="intermediate.jpg"
+              src="coach.jpeg"
               className="absolute inset-0 w-full h-full object-cover"
               alt="Intermediate Surf Bali"
             />
