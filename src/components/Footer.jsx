@@ -109,7 +109,7 @@ export default function Footer() {
       {/* Bottom */}
       <div className="px-6 lg:px-12 py-6 border-t border-slate-200 d text-center">
         <p className="text-slate-500  text-sm">
-          © {new Date().getFullYear()} DWebDev. All rights reserved.
+          © {new Date().getFullYear()} DWDev. All rights reserved.
         </p>
       </div>
 
