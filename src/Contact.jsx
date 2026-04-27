@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { FaFacebook, FaInstagram } from "react-icons/fa";
 export default function Contact() {
 const [form, setForm] = useState({
     name: "",
@@ -69,70 +70,122 @@ ${form.message}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
 
         {/* LEFT SIDE */}
-        <div className="lg:col-span-5 space-y-8">
+<div className="lg:col-span-5 space-y-8">
 
-          {/* CONNECT CARD */}
-          <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
-            <h3 className="text-2xl font-bold text-primary mb-6">
-              Connect with Us
-            </h3>
+  {/* CONNECT CARD */}
+  <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
 
-            <div className="space-y-6">
+    <h3 className="text-2xl font-bold text-primary mb-6">
+      Connect with Us
+    </h3>
 
-              {/* PHONE */}
-              <div className="flex items-start gap-4">
-                <div className="bg-white p-3 rounded-xl shadow-sm">
-                  📞
-                </div>
-                <div>
-                  <p className="text-xs tracking-widest text-slate-500 mb-1">
-                    WHATSAPP / PHONE
-                  </p>
-                  <p className="text-lg font-bold text-primary">
-                     +62 812 1567 9959
-                  </p>
-                </div>
-              </div>
+    <div className="space-y-6">
 
-              {/* EMAIL */}
-              <div className="flex items-start gap-4">
-                <div className="bg-white p-3 rounded-xl shadow-sm">
-                  ✉️
-                </div>
-                <div>
-                  <p className="text-xs tracking-widest text-slate-500 mb-1">
-                    EMAIL ADDRESS
-                  </p>
-                  <p className="text-md lg:text-lgtext-lg font-bold text-primary">
-                    hello@nyomansurfschool.com
-                  </p>
-                </div>
-              </div>
-
-            </div>
-          </div>
-
-          {/* LOCATION CARD */}
-          <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
-
-            <h3 className="text-xl font-bold text-primary mb-4">
-              Our Base
-            </h3>
-
-            <div className="flex items-start gap-4">
-              <div className="bg-orange-50 p-3 rounded-xl">
-                📍
-              </div>
-
-              <p className="text-slate-600 text-sm leading-relaxed">
-               662M+6W8, Benoa, Kec. Kuta Sel., Kabupaten Badung, Bali
-              </p>
-            </div>
-
-          
-          </div>
-
+      {/* PHONE */}
+      <div className="flex items-start gap-4">
+        <div className="bg-white p-3 rounded-xl shadow-sm">
+          📞
         </div>
+        <div>
+          <p className="text-xs tracking-widest text-slate-500 mb-1">
+            WHATSAPP / PHONE
+          </p>
+          <p className="text-lg font-bold text-primary">
+            +62 812 1567 9959
+          </p>
+        </div>
+      </div>
+
+      {/* EMAIL */}
+    <div className="flex items-start gap-4">
+
+  <div className="bg-white p-3 rounded-xl shadow-sm">
+    ✉️
+  </div>
+
+  <div className="min-w-0">
+    <p className="text-xs tracking-widest text-slate-500 mb-1">
+      EMAIL ADDRESS
+    </p>
+
+    <p className="text-lg font-bold text-primary break-words">
+      nyomanssurfschool@gmail.com
+    </p>
+  </div>
+
+</div>
+      {/* FACEBOOK (SEPARATE CARD ITEM) */}
+      <div className="flex items-start gap-4">
+
+        <div className="bg-blue-50 text-blue-600 p-3 rounded-xl">
+          <FaFacebook size={18} />
+        </div>
+
+        <div>
+          <p className="text-xs tracking-widest text-slate-500 mb-1">
+            FACEBOOK
+          </p>
+
+          <a
+            href="https://www.facebook.com/nusaduasurflessons/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary font-bold hover:text-orange-500 transition"
+          >
+            Nyoman’s Point Break - Surf School
+          </a>
+        </div>
+
+      </div>
+
+      {/* INSTAGRAM (SEPARATE CARD ITEM) */}
+      <div className="flex items-start gap-4">
+
+        <div className="bg-pink-50 text-pink-500 p-3 rounded-xl">
+          <FaInstagram size={18} />
+        </div>
+
+        <div>
+          <p className="text-xs  tracking-widest text-slate-500 mb-1">
+            INSTAGRAM
+          </p>
+
+          <a
+            href="https://www.instagram.com/nyoman_pointbreak"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary text-lg font-bold hover:text-orange-500 transition"
+          >
+            @nyoman_pointbreak
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  {/* LOCATION CARD */}
+  <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
+
+    <h3 className="text-xl text-lg font-bold text-primary mb-4">
+      Our Base
+    </h3>
+
+    <div className="flex items-start gap-4">
+      <div className="bg-orange-50 p-3 rounded-xl text-orange-500">
+        📍
+      </div>
+
+      <p className="text-slate-600 text-sm leading-relaxed">
+        ITDC Area, Benoa, Kuta Selatan, Badung, Bali
+      </p>
+    </div>
+
+  </div>
+
+</div>
 
         {/* RIGHT SIDE - FORM */}
         <div className="lg:col-span-7">
@@ -263,7 +316,7 @@ ${form.message}
 
             <p className="text-xs lg:text-sm text-slate-500 leading-relaxed mb-4">
               Located just a 2-minute walk from Nusa Dua Beach, our surf school
-              sits in the heart of Canggu’s most consistent waves.
+              sits in the heart of Nusa Dua's most consistent waves.
             </p>
 
             <a

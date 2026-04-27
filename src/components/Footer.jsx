@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { FaInstagram, FaShareAlt } from "react-icons/fa";
+import { FaInstagram, FaFacebook } from "react-icons/fa";
 
 export default function Footer() {
     const phoneNumber = "6281215679959";
@@ -23,21 +23,27 @@ export default function Footer() {
           </p>
 
           {/* Social */}
-          <div className="flex gap-3">
-            <a
-              href="#"
-              className="w-9 h-9 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all"
-            >
-              <FaShareAlt size={14} />
-            </a>
+         <div className="flex gap-3">
+  
+  <a
+    href="https://www.facebook.com/nusaduasurflessons/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="w-9 h-9 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all"
+  >
+    <FaFacebook size={14} />
+  </a>
 
-            <a
-              href="#"
-              className="w-9 h-9 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all"
-            >
-              <FaInstagram size={14} />
-            </a>
-          </div>
+  <a
+    href="https://www.instagram.com/nyoman_pointbreak"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="w-9 h-9 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all"
+  >
+    <FaInstagram size={14} />
+  </a>
+
+</div>
         </div>
 
         {/* Links */}

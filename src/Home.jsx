@@ -51,7 +51,7 @@ const features = [
       price: "350k",
       image: "group.jpeg",
       features: [
-        "1 Instructor : 3-4 Students",
+        "2 Instructor : 3-4 Students",
         "Rash guard & Sunscreen",
         "Water & Locker",
       ],
